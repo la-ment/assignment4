@@ -2,10 +2,10 @@
     #Base image fedora:latest
     FROM fedora:latest
     #Run an upgrade of the system using the dnf command
-    Install the dnf-plugin-system-upgrade package
+    RUN dnf install -y ngnix
     #Install the tuxpaint, vim,and httpd applications.
-    Install tuxpaint
-    Install vim
+    RUN apt-get install tuxpaint -y 
+    RUN "apt-get", "install", "-y", "vim"
     RUN yum install -y httpd
     #Add the myinfo.html file to the container at the /var/www/html/ location.
     cd myinfo.html /var/www/html/
